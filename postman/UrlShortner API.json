@@ -1,0 +1,514 @@
+{
+	"info": {
+		"_postman_id": "7b4cf7f7-0268-4a1d-94f4-7dee90e31406",
+		"name": "UrlShortner API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "40283823"
+	},
+	"item": [
+		{
+			"name": "URLs Service",
+			"item": [
+				{
+					"name": "Create Url",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY3NWNhZmVkNmI0ZTZlMmM3NmZkZGNlMyIsInVzZXJuYW1lIjoiam8xMiIsImlhdCI6MTczNDEzMTE5NSwiZXhwIjoxNzM0MTM0Nzk1LCJzdWIiOiJhY2Nlc3NUb2VuIn0.L1asc5noomNdI7WJDtY6EFz55cjRsG8HpLAE5xzx6hA",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "long_url",
+									"value": "https://www.google.com/search?q=cr7&sca_esv=ba58619d07deea40&udm=2&biw=1920&bih=953&sxsrf=ADLYWIKEFN0VeavwTJ75Mea8jWKOXXYEEw%3A1734131218121&ei=Er5cZ7OFB4SNkdUPlfqE4AU&ved=0ahUKEwiz1v-Z7qWKAxWERqQEHRU9AVwQ4dUDCBE&uact=5&oq=cr7&gs_lp=EgNpbWciA2NyNzIQEAAYgAQYsQMYQxiDARiKBTIKEAAYgAQYQxiKBTIKEAAYgAQYQxiKBTIKEAAYgAQYQxiKBTIKEAAYgAQYQxiKBTIKEAAYgAQYQxiKBTIKEAAYgAQYQxiKBTIKEAAYgAQYQxiKBTIFEAAYgAQyBRAAGIAESKghUNcHWO0bcAJ4AJABAJgBYqABtwOqAQE1uAEDyAEA-AEBmAIHoALNA8ICBhAAGAcYHsICCBAAGAcYChgewgIIEAAYExgHGB7CAgQQIxgnwgILEAAYgAQYsQMYgwHCAg0QABiABBixAxhDGIoFmAMAiAYBkgcDNi4xoAfLEg&sclient=img",
+									"type": "text"
+								},
+								{
+									"key": "description",
+									"value": "CR 7 wallpapers",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8000/api/v1/urls/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"urls",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get All Urls",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY3NWNhZmVkNmI0ZTZlMmM3NmZkZGNlMyIsInVzZXJuYW1lIjoiam8xMiIsImlhdCI6MTczNDIxMjQ5NywiZXhwIjoxNzM0MjE2MDk3LCJzdWIiOiJhY2Nlc3NUb2VuIn0.K5wV1Isq2hI6zOA9fDyTsP9xGsNAQIHjbQX2-4MhkZI",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8000/api/v1/urls/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"urls",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Url By ID",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY3NWNhZmVkNmI0ZTZlMmM3NmZkZGNlMyIsInVzZXJuYW1lIjoiam8xMiIsImlhdCI6MTczNDEzMTE5NSwiZXhwIjoxNzM0MTM0Nzk1LCJzdWIiOiJhY2Nlc3NUb2VuIn0.L1asc5noomNdI7WJDtY6EFz55cjRsG8HpLAE5xzx6hA",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8000/api/v1/urls/675cbe519e9f1fd99b82641e",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"urls",
+								"675cbe519e9f1fd99b82641e"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Url By ID",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY3NWNhZmVkNmI0ZTZlMmM3NmZkZGNlMyIsInVzZXJuYW1lIjoiam8xMiIsImlhdCI6MTczNDEzMjk4OCwiZXhwIjoxNzM0MTM2NTg4LCJzdWIiOiJhY2Nlc3NUb2VuIn0.xe909bGe0pNbNb1gm-J19cT2jlKRWtcdMGs92zSx9f8",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "description",
+									"value": "football wallpapers updated",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8000/api/v1/urls/675cbe259e9f1fd99b82641d",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"urls",
+								"675cbe259e9f1fd99b82641d"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Url By ID",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY3NWNhZmVkNmI0ZTZlMmM3NmZkZGNlMyIsInVzZXJuYW1lIjoiam8xMiIsImlhdCI6MTczNDEzMTE5NSwiZXhwIjoxNzM0MTM0Nzk1LCJzdWIiOiJhY2Nlc3NUb2VuIn0.L1asc5noomNdI7WJDtY6EFz55cjRsG8HpLAE5xzx6hA",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8000/api/v1/urls/675cbe519e9f1fd99b82641e",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"urls",
+								"675cbe519e9f1fd99b82641e"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Redirect Url",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY3NWNhZmQzNmI0ZTZlMmM3NmZkZGNlMiIsInVzZXJuYW1lIjoiYWgxMiIsImlhdCI6MTczNDEyOTg5NSwiZXhwIjoxNzM0MTMzNDk1LCJzdWIiOiJhY2Nlc3NUb2VuIn0.M8PzG8JceHtqzO5QZtIxivmkN6u0XhqkCsa8TRLxZoE",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8000/api/v1/urls/r/UeBlxPIw",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"urls",
+								"r",
+								"UeBlxPIw"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Auth Service",
+			"item": [
+				{
+					"name": "Register User",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "name",
+									"value": "Yousef Adel",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "jo12@mail.com",
+									"type": "text"
+								},
+								{
+									"key": "username",
+									"value": "jo12",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "123456",
+									"type": "text"
+								},
+								{
+									"key": "profileImage",
+									"value": "test.ong",
+									"type": "text",
+									"disabled": true
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8000/api/v1/auth/register",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"auth",
+								"register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Login User",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "username",
+									"value": "jo12",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "123456",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8000/api/v1/auth/login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"auth",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "User Profile",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY3NWNhZmVkNmI0ZTZlMmM3NmZkZGNlMyIsInVzZXJuYW1lIjoiam8xMiIsImlhdCI6MTczNDIxMTkzOSwiZXhwIjoxNzM0MjE1NTM5LCJzdWIiOiJhY2Nlc3NUb2VuIn0.mh6k6PB8zv8p3c3iu1LIwZOC5T1CeqiLHuzEUSOzjOc",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8000/api/v1/auth/profile",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"auth",
+								"profile"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Upload Profile Image",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY3NWNhZmVkNmI0ZTZlMmM3NmZkZGNlMyIsInVzZXJuYW1lIjoiam8xMiIsImlhdCI6MTczNDIxMDAwOSwiZXhwIjoxNzM0MjEzNjA5LCJzdWIiOiJhY2Nlc3NUb2VuIn0.qWOckptTU34c-YrOQNf2FnN1EpRbcWS8cvsf0hnykE0",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "profile_image",
+									"type": "file",
+									"src": "/J:/ahmed/New folder/979cc057-f039-4120-a72e-79ce6c96315b.jpg"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8000/api/v1/auth/upload",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"auth",
+								"upload"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Logout User",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY3NWNhZmVkNmI0ZTZlMmM3NmZkZGNlMyIsInVzZXJuYW1lIjoiam8xMiIsImlhdCI6MTczNDIxMDAwOSwiZXhwIjoxNzM0MjEzNjA5LCJzdWIiOiJhY2Nlc3NUb2VuIn0.qWOckptTU34c-YrOQNf2FnN1EpRbcWS8cvsf0hnykE0",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8000/api/v1/auth/logout",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"auth",
+								"logout"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update User info",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY3NWNhZmVkNmI0ZTZlMmM3NmZkZGNlMyIsInVzZXJuYW1lIjoiam8xMiIsImlhdCI6MTczNDIxMjQ5NywiZXhwIjoxNzM0MjE2MDk3LCJzdWIiOiJhY2Nlc3NUb2VuIn0.K5wV1Isq2hI6zOA9fDyTsP9xGsNAQIHjbQX2-4MhkZI",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "name",
+									"value": "YOUSSEF ADEL MAHMOUD",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "new.jo@mail.com",
+									"type": "text",
+									"disabled": true
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8000/api/v1/auth/profile",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"auth",
+								"profile"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete User",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY3NWNhZmVkNmI0ZTZlMmM3NmZkZGNlMyIsInVzZXJuYW1lIjoiam8xMiIsImlhdCI6MTczNDIxMjQ5NywiZXhwIjoxNzM0MjE2MDk3LCJzdWIiOiJhY2Nlc3NUb2VuIn0.K5wV1Isq2hI6zOA9fDyTsP9xGsNAQIHjbQX2-4MhkZI",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8000/api/v1/auth/profile",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"auth",
+								"profile"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
